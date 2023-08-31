@@ -22,28 +22,11 @@ By using Nix Home Manager in combination with the Nix package manager, you can c
 # How to use my flake
 ### Prerequisite
 
-##### Linux Single User
+##### Nix Package Manager
+Easy install with determinate systems
 
 ```console
-sh <(curl -L https://nixos.org/nix/install) --daemon
-```
-
-##### Linux Multi User
-
-```console
-sh <(curl -L https://nixos.org/nix/install) --no-daemon
-```
-
-
-#### Enable `experimental-features`
-
-In general installation of nix, the nix configuration is located in `~/.config/nix/nix.conf`.
-You **MUST** be set the `experimental-features` before use [this configuration](https://github.com/kemalmao19/flake).
-
-```cfg
-mkdir -p ~/.config/nix
-
-echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 ```
 
 ### Setup

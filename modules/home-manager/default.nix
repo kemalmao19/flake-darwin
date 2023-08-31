@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   # Don't change this when you change package input. Leave it alone.
-  home.stateVersion = "22.11";
+  home.stateVersion = "23.05";
   home.sessionVariables = {
     PAGER = "less";
     CLICLOLOR = 1;
@@ -17,6 +17,7 @@
      ranger
      neofetch
      bottom
+     # spotify
   #  fd
   #  curl
   #  less
@@ -124,10 +125,18 @@
     };
   };
 
+  programs.fish = {
+    enable = true;
+    shellAbbrs = {
+      cp = "cp -iv";
+      mv = "mv -iv";
+    };
+  };
+
   programs.starship = {
     enable = true;
-    enableZshIntegration = true;
-    # enableTransience = false;
+    enableFishIntegration = true;
+    enableZshIntegration = true;   # enableTransience = false;
     settings = {
       add_newline = true;
       character = {
@@ -139,6 +148,7 @@
 
   programs.zoxide = {
     enable = true;
+    enableFishIntegration = true;
     enableZshIntegration = true;
     options = [
       # "--no-aliases"
@@ -150,17 +160,18 @@
     settings = {
       font = { 
         normal.family = "MesloLGS Nerd Font Mono";
-        size = 14;
+        size = 12;
       };
       window = {
         dimensions = {
-          lines = 20;
-          columns = 60;
+          lines = 25;
+          columns = 80;
         };
         padding = {
           x = 10;
           y = 10;
         };
+        background_opacity = 0.50;
         startup_mode =''windowed'';
       };
     };  

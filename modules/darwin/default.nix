@@ -1,9 +1,10 @@
 { pkgs, ... }: {
   # here go the darwin preferences and config items
+  programs.fish.enable = true;
   programs.zsh.enable = true;
   environment = {
-    shells = with pkgs; [bash  zsh ];
-    loginShell = pkgs.zsh;
+    shells = with pkgs; [bash  zsh fish ];
+    loginShell = pkgs.fish;
     systemPackages = [ pkgs.coreutils ];
     systemPath = [ "/opt/homebrew/bin" ];
     pathsToLink = [ "/Applications" ];
@@ -12,15 +13,15 @@
     experimental-features = nix-command flakes
   '';
     
-  system.keyboard.enableKeyMapping = true;
-  system.keyboard.remapCapsLockToEscape = true;
+  # system.keyboard.enableKeyMapping = true;
+  # system.keyboard.remapCapsLockToEscape = true;
   fonts.fontDir.enable = true; # DANGER
   fonts.fonts = [ (pkgs.nerdfonts.override { fonts = [ "Meslo" ]; }) ];
   services.nix-daemon.enable = true;
   system.defaults = {
     finder.AppleShowAllExtensions = true;
     finder._FXShowPosixPathInTitle = true;
-    dock.autohide = true;
+    # dock.autohide = true;
     NSGlobalDomain.AppleShowAllExtensions = true;
     NSGlobalDomain.InitialKeyRepeat = 14;
     NSGlobalDomain.KeyRepeat = 1;

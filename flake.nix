@@ -19,7 +19,14 @@
   outputs = inputs@{ nixpkgs, home-manager, darwin, ... }: {
     darwinConfigurations.kemalmao = darwin.lib.darwinSystem {
       system = "x86_64-darwin";
-      pkgs = import nixpkgs { system = "x86_64-darwin"; };
+      pkgs = import nixpkgs { 
+        system = "x86_64-darwin"; 
+        config = { 
+          allowUnfree = true;
+          allowUnsupportedSystem = true;
+          allowBroken = true;
+          };
+        };
       
       modules = [
         ./modules/darwin
