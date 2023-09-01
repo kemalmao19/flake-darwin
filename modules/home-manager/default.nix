@@ -8,53 +8,54 @@
   };
 
   # specify my home-manager configs
+  # App bundle
   home.packages = with pkgs; [
-  #  ripgrep
-     vscodium
-     git
-     exa
-     trash-cli
-     ranger
-     neofetch
-     bottom
-     # spotify
-  #  fd
-  #  curl
-  #  less
-  #  pwnvim.packages."aarch64-darwin".default
+    #  ripgrep
+    vscodium
+    git
+    exa
+    trash-cli
+    ranger
+    neofetch
+    bottom
+    # cava
+    nixfmt
+    # spotify
+    #  fd
+    #  curl
+    #  less
+    #  pwnvim.packages."aarch64-darwin".default
 
     # Python environment
-    (python310.withPackages (
-	  	ps:
-			with ps; [
-			  # IDE
-			  jupyterlab
-			  ipython
-			  ipykernel
+    (python310.withPackages (ps:
+      with ps; [
+        # IDE
+        jupyterlab
+        ipython
+        ipykernel
 
-				# Spyder IDE
-				# spyder
-				# spyder-kernels
+        # Spyder IDE
+        # spyder
+        # spyder-kernels
 
-			  # DS
-				pandas
-			  matplotlib
-			  numpy
-			  # plotly
-			  scikit-learn-extra
-			  scipy
-			  # seaborn
+        # DS
+        pandas
+        matplotlib
+        numpy
+        # plotly
+        scikit-learn-extra
+        scipy
+        # seaborn
 
-			  # probabilistic
-			  # pymc
+        # probabilistic
+        # pymc
 
-			  # formatter
-			  black
+        # formatter
+        black
 
-			  # other
-			  # virtualenv
-			])
-    )
+        # other
+        # virtualenv
+      ]))
   ];
 
   programs.bat = {
@@ -64,7 +65,7 @@
 
   programs.git = {
     enable = true;
-    userName  = "kemalmao19";
+    userName = "kemalmao19";
     userEmail = "sebelumtidur14@gmail.com";
   };
 
@@ -88,11 +89,12 @@
   programs.tmux = {
     enable = true;
     # mouse = true;
-    plugins = with pkgs; [ 
-      #tmuxPlugins.catppuccin
-      tmuxPlugins.power-theme
-    ];
-    
+    plugins = with pkgs;
+      [
+        #tmuxPlugins.catppuccin
+        tmuxPlugins.power-theme
+      ];
+
     extraConfig = ''
 
       set -g status off
@@ -104,7 +106,7 @@
       set -g pane-border-style "fg=$bg_color bg=$bg_color"
       set -g pane-active-border-style "fg=$bg_color bg=$bg_color"
       set -sg escape-time 10 
-     '';
+    '';
 
   };
 
@@ -112,7 +114,7 @@
     enable = true;
     enableZshIntegration = true;
   };
-  
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -136,7 +138,7 @@
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
-    enableZshIntegration = true;   # enableTransience = false;
+    enableZshIntegration = true; # enableTransience = false;
     settings = {
       add_newline = true;
       character = {
@@ -158,7 +160,7 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      font = { 
+      font = {
         normal.family = "MesloLGS Nerd Font Mono";
         size = 12;
       };
@@ -171,10 +173,10 @@
           x = 10;
           y = 10;
         };
-        background_opacity = 0.50;
-        startup_mode =''windowed'';
+        background_opacity = 0.5;
+        startup_mode = "windowed";
       };
-    };  
+    };
   };
   home.file.".inputrc".source = ./dotfiles/inputrc;
 
