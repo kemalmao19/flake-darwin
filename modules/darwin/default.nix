@@ -29,9 +29,9 @@
       autohide = true;
       autohide-delay = 0.0;
       autohide-time-modifier = 0.2;
-      # expose-animation-suration = 0.2;
-      tilesize = 48;
-      # launchanime = false;
+      expose-animation-duration = 0.2;
+      tilesize = 24;
+      launchanim = false;
       static-only = false;
       showhidden = true;
       show-recents = false;
@@ -46,15 +46,16 @@
     NSGlobalDomain.KeyRepeat = 1;
   };
 
+  # User Custom Preferences
   system.defaults.CustomUserPreferences = {
     NSGlobalDomain = {
       # Add a context menu item for showing the Web Inspector in web views
       WebKitDeveloperExtras = true;
     };
     "com.apple.finder" = {
-      ShowExternalHardDrivesOnDesktop = true;
-      ShowHardDrivesOnDesktop = true;
-      ShowMountedServersOnDesktop = true;
+      ShowExternalHardDrivesOnDesktop = false;
+      ShowHardDrivesOnDesktop = false;
+      ShowMountedServersOnDesktop = false;
       ShowRemovableMediaOnDesktop = true;
       _FXSortFoldersFirst = true;
       # When performing a search, search the current folder by default
@@ -129,6 +130,32 @@
     "com.apple.ImageCapture".disableHotPlug = true;
     # Turn on app auto-update
     "com.apple.commerce".AutoUpdate = false;
+  };
+
+  # YABAI Window Manager
+  # services.yabai = {
+  #   enable = true;
+  #   config = {
+  #         focus_follows_mouse = "autoraise";
+  #         # mouse_follows_focus = "off";
+  #         window_placement    = "second_child";
+  #         window_opacity      = "off";
+  #         top_padding         = 10;
+  #         bottom_padding      = 10;
+  #         left_padding        = 10;
+  #         right_padding       = 10;
+  #         window_gap          = 10;
+  #       };
+  #   extraConfig = ''
+  #     yabai -m rule --add app='System Preferences' manage=off
+  #   '';
+  #   # enableScriptingAddition = true;
+  # };
+
+  # KWM WIndow Manager
+  services.kwm = {
+    enable = true;
+    
   };
 
   # backwards compat; don't change

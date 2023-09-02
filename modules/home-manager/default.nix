@@ -88,7 +88,8 @@
 
   programs.tmux = {
     enable = true;
-    # mouse = true;
+    # enableMouse = true;
+    # enableSensible = true;
     plugins = with pkgs;
       [
         #tmuxPlugins.catppuccin
