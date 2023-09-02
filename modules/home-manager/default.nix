@@ -69,22 +69,24 @@
     userEmail = "sebelumtidur14@gmail.com";
   };
 
-  programs.helix = {
-    enable = true;
-    settings = {
-      theme = "tokyonight";
-      editor = {
-        line-number = "relative";
-        lsp.display-messages = true;
-      };
-      keys.normal = {
-        space.space = "file_picker";
-        space.w = ":w";
-        space.q = ":q";
-        esc = [ "collapse_selection" "keep_primary_selection" ];
-      };
-    };
-  };
+  # programs.helix = {
+  #   enable = true;
+  #   settings = {
+  #     theme = "tokyonight";
+  #     editor = {
+  #       line-number = "relative";
+  #       lsp.display-messages = true;
+  #     };
+  #     keys.normal = {
+  #       space.space = "file_picker";
+  #       space.w = ":w";
+  #       space.q = ":q";
+  #       esc = [ "collapse_selection" "keep_primary_selection" ];
+  #     };
+  #   };
+  # };
+
+  imports = [ ./helix.nix ];
 
   programs.tmux = {
     enable = true;
@@ -126,6 +128,32 @@
       nixswitch = "darwin-rebuild switch --flake .#";
       nixup = "pushd ~/src/system-config; nix flake update; nixswitch; popd";
     };
+
+    localVariables = {
+      vivid_theme = "catppuccin-macchiato";
+    };
+    
+    plugins = [
+      {
+        name = "ohmyzsh-macos";
+        file = "plugins/macos.zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "ohmyzsh";
+          repo = "ohmyzsh";
+          rev = "c4392a4da31efee36f29a62d3951d5c0fcd7d4e6";
+          sha256 = "sha256-cMJCmhtcCAVDFgp6Ryv/5DteSRtwNcemO97as8ill8I=";
+        };
+      }
+      {
+        name = "vivid-zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "ryanccn";
+          repo = "vivid-zsh";
+          rev = "a76616c87821e96ae0cbdfb6bf897bffc170a283";
+          sha256 = "sha256-E00xQMCmOt6fJ+IO/TrpFvskNa9QnDw/6DKR51T7i+8=";
+        };
+      }
+    ];
   };
 
   programs.fish = {
@@ -175,7 +203,7 @@
           y = 10;
         };
         background_opacity = 0.5;
-        startup_mode = "windowed";
+        # startup_mode = "windowed";
       };
     };
   };

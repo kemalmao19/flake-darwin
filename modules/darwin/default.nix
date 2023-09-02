@@ -165,8 +165,10 @@
     caskArgs.no_quarantine = true;
     global.brewfile = true;
     masApps = { };
-    casks = [ "amethyst" ];
+    casks = [ 
+      "superproductivity"
+      ];
     taps = [ ];
-    brews = [ ];
+    brews = [  ];
   };
 }
