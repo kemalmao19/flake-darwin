@@ -1,7 +1,8 @@
 {pkgs, ... }: {
-    services.skhd.enable = cfg.enable;
-    services.skhd.package = pkgs.skhd;
-    services.skhd.skhdConfig = ''
+    services.skhd = {
+      enable = true;
+      package = pkgs.skhd;
+      skhdConfig = ''
       # toggle window properties
       cmd + ctrl - o : yabai -m window --toggle zoom-fullscreen
       cmd + ctrl - f : yabai -m window --toggle float
@@ -31,4 +32,5 @@
       # https://github.com/koekeishiya/yabai/issues/658
       cmd + ctrl - p : yabai -m window --toggle split
     '';
+  };
 }

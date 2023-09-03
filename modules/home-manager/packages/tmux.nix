@@ -3,10 +3,15 @@
     enable = true;
     # enableMouse = true;
     # enableSensible = true;
+    reverseSplit = true;
+    newSession = true;
+    customPaneNavigationAndResize = true;
+
     plugins = with pkgs;
       [
         #tmuxPlugins.catppuccin
         tmuxPlugins.power-theme
+        tmuxPlugins.yank
       ];
 
     extraConfig = ''

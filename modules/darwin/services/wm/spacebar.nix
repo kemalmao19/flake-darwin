@@ -1,7 +1,8 @@
 {pkgs, ... }: {
-  services.spacebar.enable = cfg.enable;
-    services.spacebar.package = pkgs.spacebar;
-    services.spacebar.config = {
+  services.spacebar = {
+    enable = true;
+    package = pkgs.spacebar;
+    config = {
       position = "top";
       display = "main";
       height = 26;
@@ -37,4 +38,5 @@
       right_shell_icon = "";
       right_shell_command = "whoami";
     };
+  };
 }

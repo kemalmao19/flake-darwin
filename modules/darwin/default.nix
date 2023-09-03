@@ -23,7 +23,7 @@
     # ./services/wm/kwm.nix 
     ./services/wm/yabai.nix
     ./services/wm/skhd.nix
-    ./services/wm/spacebar.nix
+    # ./services/wm/spacebar.nix
 
     # Homebrew
     ./services/brew.nix
