@@ -1,4 +1,4 @@
-# Home Manager with Nix
+# MacOS Home Manager with Nix
 This is simple nix flake (update 08/2023)
 
 # Why Nix
@@ -23,7 +23,7 @@ By using Nix Home Manager in combination with the Nix package manager, you can c
 ### Prerequisite
 
 ##### Nix Package Manager
-Easy install with determinate systems
+Easy install with determinate systems:
 
 ```console
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
