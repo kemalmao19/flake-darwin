@@ -5,7 +5,7 @@
     config = {
       position = "top";
       display = "main";
-      height = 26;
+      height = 20;
       title = "on";
       spaces = "on";
       clock = "on";
@@ -23,8 +23,8 @@
       dnd_icon_color = "0xffa8a8a8";
       clock_icon_color = "0xffa8a8a8";
       power_icon_strip = " ";
-      space_icon = "•";
-      space_icon_strip = "1 2 3 4 5 6 7 8 9 10";
+      space_icon = "⌘";
+      space_icon_strip = "I II III IV V VI VII VIII IX X";
       spaces_for_all_displays = "on";
       display_separator = "on";
       display_separator_icon = "";

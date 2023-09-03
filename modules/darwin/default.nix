@@ -9,6 +9,7 @@
     systemPath = [ "/opt/homebrew/bin" ];
     pathsToLink = [ "/Applications" ];
   };
+
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
@@ -23,7 +24,7 @@
     # ./services/wm/kwm.nix 
     ./services/wm/yabai.nix
     ./services/wm/skhd.nix
-    # ./services/wm/spacebar.nix
+    ./services/wm/spacebar.nix
 
     # Homebrew
     ./services/brew.nix
@@ -35,7 +36,7 @@
     ./services/main_darwin.nix
 
     # database sql
-    ./services/postgresql.nix
+    # ./services/postgresql.nix
     ];
 
   # backwards compat; don't change

@@ -1,9 +1,8 @@
 {pkgs, ... }: {
-
   programs.helix = {
     enable = true;
     settings = {
-      theme = "tokyonight";
+      theme = "catppuccin_macchiato";
       editor = {
         line-number = "relative";
         lsp.display-messages = true;
