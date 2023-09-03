@@ -19,9 +19,11 @@
   '';
 
   imports = [ 
-    # WM
-    ./services/kwm.nix 
-    # ./services/yabai.nix
+    # Window Manager
+    # ./services/wm/kwm.nix 
+    ./services/wm/yabai.nix
+    ./services/wm/skhd.nix
+    ./services/wm/spacebar.nix
 
     # Homebrew
     ./services/brew.nix
