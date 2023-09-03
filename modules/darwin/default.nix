@@ -31,6 +31,9 @@
 
     # Main Darwin
     ./services/main_darwin.nix
+
+    # database sql
+    ./services/postgresql.nix
     ];
 
   # backwards compat; don't change
