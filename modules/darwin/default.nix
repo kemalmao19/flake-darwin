@@ -153,10 +153,12 @@
   # };
 
   # KWM WIndow Manager
-  services.kwm = {
-    enable = true;
+  # services.kwm = {
+  #   enable = true;
     
-  };
+  # };
+
+  imports = [ ./services/kwm.nix ];
 
   # backwards compat; don't change
   system.stateVersion = 4;
