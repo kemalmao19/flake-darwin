@@ -1,5 +1,37 @@
 {
   "nodes": {
+    "clipboard-image": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1684856476,
+        "narHash": "sha256-WTc5dzsRTK4Z68ITCoBD1XoFFXbeHuniMlP92U6g/qY=",
+        "owner": "postfen",
+        "repo": "clipboard-image.nvim",
+        "rev": "af8fdaad7e6fed0741e18dbf2f57bdc7494adaee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "postfen",
+        "repo": "clipboard-image.nvim",
+        "type": "github"
+      }
+    },
+    "conform-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1695342539,
+        "narHash": "sha256-Eo1Qc3AdpKwI6ouMOgGE5ilGzOyNH0DBD59rBI8mbIY=",
+        "owner": "stevearc",
+        "repo": "conform.nvim",
+        "rev": "4a4c92715b174b847ba0fcdccf9dfea71c8ed33e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "stevearc",
+        "repo": "conform.nvim",
+        "type": "github"
+      }
+    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -17,6 +49,46 @@
       "original": {
         "owner": "lnl7",
         "repo": "nix-darwin",
+        "type": "github"
+      }
+    },
+    "fenix": {
+      "inputs": {
+        "nixpkgs": [
+          "pwnvim",
+          "nixpkgs"
+        ],
+        "rust-analyzer-src": "rust-analyzer-src"
+      },
+      "locked": {
+        "lastModified": 1695363721,
+        "narHash": "sha256-+VRVzXpWdSsZPcR2Cg9Q5LKhUQDVvoQFfH4V8iKNAkU=",
+        "owner": "nix-community",
+        "repo": "fenix",
+        "rev": "cb59ad177b991978ff571388bf8df6fed32e6bc2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "fenix",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1694529238,
+        "narHash": "sha256-zsNZZGTGnMOf9YpHKJqMSsa0dXbfmxeoJ7xHlrt+xmY=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "ff7b65b44d01cf9ba6a71320833626af21126384",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
         "type": "github"
       }
     },
@@ -58,11 +130,83 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1695227375,
+        "narHash": "sha256-76WTkeCu3npPZDkay2hB2Dj3cOuCiF0P41dbmXWUKtA=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "fe977679240ac2027b151ecca1bc6ce808c2e8af",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "pwnvim": {
+      "inputs": {
+        "clipboard-image": "clipboard-image",
+        "conform-nvim": "conform-nvim",
+        "fenix": "fenix",
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs_2",
+        "vscode-langservers-custom": "vscode-langservers-custom"
+      },
+      "locked": {
+        "lastModified": 1695933496,
+        "narHash": "sha256-KDicU8b8fX7ivC8koai07fIKjK0LCkofSo9JeH3rbVI=",
+        "owner": "zmre",
+        "repo": "pwnvim",
+        "rev": "b86c4aa2af4350a8bcc7227e1c1f55e8e56c511b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zmre",
+        "repo": "pwnvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "darwin": "darwin",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "pwnvim": "pwnvim"
+      }
+    },
+    "rust-analyzer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1695220688,
+        "narHash": "sha256-T54aKrnKMI7Cg2mid5h46mWAXd0xc0pYn0fju3dwXf0=",
+        "owner": "rust-lang",
+        "repo": "rust-analyzer",
+        "rev": "d6fef2c7e3be2783369b4b84e320b163b8fd291a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rust-lang",
+        "ref": "nightly",
+        "repo": "rust-analyzer",
+        "type": "github"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
       }
     },
     "utils": {
@@ -77,6 +221,23 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "vscode-langservers-custom": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1682357637,
+        "narHash": "sha256-RLRDEHfEJ2ckn0HTMu0WbMK/o9W20Xwm+XI6kCq57u8=",
+        "owner": "hrsh7th",
+        "repo": "vscode-langservers-extracted",
+        "rev": "dfa59d9fbea396c02884af085d6a1b300057b60c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hrsh7th",
+        "ref": "v4.7.0",
+        "repo": "vscode-langservers-extracted",
         "type": "github"
       }
     }

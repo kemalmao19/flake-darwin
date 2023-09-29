@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   programs.fzf = {
     enable = true;
-    enableZshIntegration = true;
+    # enableZshIntegration = true;
+    enableFishIntegration = true;
   };
 }

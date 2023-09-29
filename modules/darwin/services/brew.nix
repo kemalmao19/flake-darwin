@@ -6,6 +6,8 @@
     masApps = { };
     casks = [ 
       "superproductivity"
+      "notion"
+      "figma"
       ];
     taps = [ ];
     brews = [  ];

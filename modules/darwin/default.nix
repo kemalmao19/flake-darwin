@@ -3,8 +3,8 @@
   programs.fish.enable = true;
   programs.zsh.enable = true;
   environment = {
-    shells = with pkgs; [ bash zsh fish ];
-    loginShell = pkgs.fish;
+    # shells = with pkgs; [ bash zsh fish ];
+    # loginShell = pkgs.fish;
     systemPackages = [ pkgs.coreutils ];
     systemPath = [ "/opt/homebrew/bin" ];
     pathsToLink = [ "/Applications" ];
@@ -24,7 +24,7 @@
     # ./services/wm/kwm.nix 
     ./services/wm/yabai.nix
     ./services/wm/skhd.nix
-    ./services/wm/spacebar.nix
+    # ./services/wm/spacebar.nix
 
     # Homebrew
     ./services/brew.nix

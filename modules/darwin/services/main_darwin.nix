@@ -27,6 +27,7 @@
       mru-spaces = false;
       # mouse in top right corner will start screensaver
       wvous-tr-corner = 5;
+      wvous-br-corner = 4;
     };
     NSGlobalDomain.AppleShowAllExtensions = true;
     NSGlobalDomain.InitialKeyRepeat = 14;

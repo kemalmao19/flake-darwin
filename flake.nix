@@ -18,9 +18,7 @@
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Tricked out nvim
-    # pwnvim.url = "github:zmre/pwnvim";
+    
   };
 
 
@@ -35,7 +33,7 @@
           # allowBroken = true;
           };
         };
-      
+       
       modules = [
         ./modules/darwin
         

@@ -12,7 +12,6 @@
   home.packages = with pkgs; [
     #  ripgrep
     vscodium
-    git
     exa
     trash-cli
     ranger
@@ -25,19 +24,21 @@
     #  fd
     #  curl
     #  less
-    #  pwnvim.packages."aarch64-darwin".default
+    
   ];
 
   imports = [ 
     ./packages/helix.nix 
-    ./packages/zsh.nix
+    # ./packages/zsh.nix
     ./packages/alacritty.nix
     ./packages/fish.nix
     ./packages/tmux.nix
     ./packages/fzf.nix
     ./packages/starship.nix
     ./packages/zoxide.nix
-    ./packages/shell.nix
+    .packages/git.nix
+    .packages/nvim.nix
+    # ./packages/shell.nix
     ./packages/starship-symbol.nix
   ];
   # dotfiles
