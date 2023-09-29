@@ -28,7 +28,7 @@
   ];
 
   imports = [ 
-    ./packages/helix.nix 
+    #./packages/helix.nix 
     # ./packages/zsh.nix
     ./packages/alacritty.nix
     ./packages/fish.nix
@@ -36,8 +36,8 @@
     ./packages/fzf.nix
     ./packages/starship.nix
     ./packages/zoxide.nix
-    .packages/git.nix
-    .packages/nvim.nix
+    ./packages/git.nix
+    ./packages/nvim.nix
     # ./packages/shell.nix
     ./packages/starship-symbol.nix
   ];
