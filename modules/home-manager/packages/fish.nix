@@ -14,7 +14,6 @@
       gpull = "git pull";
       gpush = "git push";
       py = "python";
-      vi = "nvim";
       startdb = "systemctl start mysql";
       stopdb = "systemctl stop mysql";
       statdb = "systemctl status mysql";
