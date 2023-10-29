@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, nixvim, ... }: {
   # Don't change this when you change package input. Leave it alone.
   home.stateVersion = "23.05";
   home.sessionVariables = {
@@ -6,7 +6,7 @@
     CLICLOLOR = 1;
     EDITOR = "hx";
   };
-
+  
   # specify my home-manager configs
   # App bundle
   home.packages = with pkgs; [
@@ -27,8 +27,8 @@
     
   ];
 
-  imports = [ 
-    ./packages/helix.nix 
+  imports = [
+    #./packages/helix.nix 
     # ./packages/zsh.nix
     ./packages/alacritty.nix
     ./packages/fish.nix
@@ -37,8 +37,8 @@
     ./packages/starship.nix
     ./packages/zoxide.nix
     ./packages/git.nix
-    #./packages/nvim.nix
-    ./packages/nixvim.nix
+    ./packages/nvim.nix
+    #./packages/nixvim.nix
     # ./packages/shell.nix
     ./packages/starship-symbol.nix
   ];

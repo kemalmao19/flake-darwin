@@ -18,17 +18,11 @@
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Vim from nix community
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     
   };
 
 
-  outputs = inputs@{ nixpkgs, home-manager, darwin, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, darwin, nixvim,... }: {
     darwinConfigurations.kemalmao = darwin.lib.darwinSystem {
       system = "x86_64-darwin";
       pkgs = import nixpkgs { 
@@ -42,14 +36,15 @@
        
       modules = [
         ./modules/darwin
-        
-        home-manager.darwinModules.home-manager
-        {
+
+        home-manager.darwinModules.home-manager{
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
             # extraSpecialArgs = { inherit pwnvim; };
-            users.kemalmao.imports = [ ./modules/home-manager ];
+            users.kemalmao.imports = [
+              ./modules/home-manager
+            ];
           };
         }
       ];

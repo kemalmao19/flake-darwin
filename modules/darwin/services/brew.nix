@@ -4,8 +4,8 @@
     caskArgs.no_quarantine = true;
     global.brewfile = true;
     masApps = { };
-    casks = [ 
-      "superproductivity"
+    casks = [
+      "iterm2"
       "notion"
       "figma"
       ];
