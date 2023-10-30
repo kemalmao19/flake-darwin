@@ -1,4 +1,5 @@
 {pkgs, inputs, ...}:{
+
   nixpkgs = {
     overlays = [
       (final: prev: {
@@ -25,18 +26,17 @@
     vimdiffAlias = true;
 
     extraPackages = with pkgs; [
-      lua-language-server
       rnix-lsp
 
       xclip
-      wl-clipboard
+      #wl-clipboard
     ];
 
     plugins = with pkgs.vimPlugins; [
 
       {
         plugin = nvim-lspconfig;
-        config = toLuaFile ./nvim/plugin/lsp.lua;
+        config = toLuaFile ./plugin/lsp.lua;
       }
 
       {
@@ -44,22 +44,22 @@
         config = toLua "require(\"Comment\").setup()";
       }
 
-      {
-        plugin = gruvbox-nvim;
-        config = "colorscheme gruvbox";
-      }
+      #{
+       # plugin = gruvbox-nvim;
+        #config = "colorscheme gruvbox";
+      #}
 
       neodev-nvim
 
       nvim-cmp 
       {
         plugin = nvim-cmp;
-        config = toLuaFile ./nvim/plugin/cmp.lua;
+        config = toLuaFile ./plugin/cmp.lua;
       }
 
       {
         plugin = telescope-nvim;
-        config = toLuaFile ./nvim/plugin/telescope.lua;
+        config = toLuaFile ./plugin/telescope.lua;
       }
 
       telescope-fzf-native-nvim
@@ -83,7 +83,7 @@
           p.tree-sitter-python
           p.tree-sitter-json
         ]));
-        config = toLuaFile ./nvim/plugin/treesitter.lua;
+        config = toLuaFile ./plugin/treesitter.lua;
       }
 
       vim-nix
@@ -94,8 +94,8 @@
       # }
     ];
 
-    extraLuaConfig = ''
-      ${builtins.readFile ./nvim/options.lua}
-    '';
+    #extraLuaConfig = ''
+    #  ${builtins.readFile ./options.lua}
+    #'';
   };
 }
