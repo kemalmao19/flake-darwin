@@ -18,11 +18,17 @@
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # colorscheme
+    plugin-onedark = {
+      url = "github:navarasu/onedark.nvim";
+      flake = false;
+    };
     
   };
 
 
-  outputs = inputs@{ nixpkgs, home-manager, darwin, nixvim,... }: {
+  outputs = inputs@{ nixpkgs, home-manager, darwin,... }: {
     darwinConfigurations.kemalmao = darwin.lib.darwinSystem {
       system = "x86_64-darwin";
       pkgs = import nixpkgs { 
@@ -41,7 +47,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            # extraSpecialArgs = { inherit pwnvim; };
+            extraSpecialArgs = { inherit inputs; };
             users.kemalmao.imports = [
               ./modules/home-manager
             ];

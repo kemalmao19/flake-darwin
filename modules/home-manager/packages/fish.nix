@@ -19,6 +19,7 @@
       statdb = "systemctl status mysql";
       nixpkg = "nix-env -iA nixpkgs";
       nixospkg = "nix-env -iA nixos";
+      ls = "exa";
       # vi = "hx";
       # ls = "exa";
       # top = "btm";

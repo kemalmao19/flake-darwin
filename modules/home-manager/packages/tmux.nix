@@ -16,6 +16,7 @@
 
     extraConfig = ''
       set -g status off
+      set -g mouse on
 
       # COLORS
       bg_color='#282c34'

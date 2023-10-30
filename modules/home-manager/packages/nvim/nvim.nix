@@ -77,6 +77,9 @@
                               -- Alternatively specify preferred servers for a filetype (others will be ignored).
                   preferred_servers = {
                     python = { "pyright" },
+                    html = {"html"},
+                    css = {"emmet_ls"},
+                    javascript = {"eslint"}
                   },
                           }
         '';

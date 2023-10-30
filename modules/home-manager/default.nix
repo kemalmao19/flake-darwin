@@ -4,7 +4,7 @@
   home.sessionVariables = {
     PAGER = "less";
     CLICLOLOR = 1;
-    EDITOR = "hx";
+    EDITOR = "nvim";
   };
   
   # specify my home-manager configs
@@ -30,7 +30,7 @@
   imports = [
     #./packages/helix.nix 
     # ./packages/zsh.nix
-    ./packages/alacritty.nix
+    # ./packages/alacritty.nix
     ./packages/fish.nix
     ./packages/tmux.nix
     ./packages/fzf.nix
@@ -38,8 +38,7 @@
     ./packages/zoxide.nix
     ./packages/git.nix
     ./packages/nvim.nix
-    #./packages/nixvim.nix
-    # ./packages/shell.nix
+    #./packages/neovim.nix
     ./packages/starship-symbol.nix
   ];
   # dotfiles
