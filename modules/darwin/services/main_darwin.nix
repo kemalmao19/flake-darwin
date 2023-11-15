@@ -13,7 +13,7 @@
     finder.AppleShowAllExtensions = true;
     finder._FXShowPosixPathInTitle = true;
     dock = {
-      autohide = true;
+      autohide = false;
       autohide-delay = 0.0;
       autohide-time-modifier = 0.2;
       expose-animation-duration = 0.2;

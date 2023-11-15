@@ -137,3 +137,6 @@ end
   require('lspconfig')['pyright'].setup {
     capabilities = capabilities
   }
+  require('lspconfig')['rnix'].setup {
+    capabilities = capabilities
+  }

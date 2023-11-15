@@ -27,13 +27,14 @@
       mouse_action2 = "resize";
       layout = "bsp";
       top_padding = 10;
-      bottom_padding = 10;
+      bottom_padding = 0;
       left_padding = 10;
       right_padding = 10;
       window_gap = 10;
     };
     extraConfig = ''
       yabai -m rule --add app='System Preferences' manage=off
+      yabai -m query --windows | jq 'map(select(.app == "zoom.us"))'
     '';
     # enableScriptingAddition = true;
   };

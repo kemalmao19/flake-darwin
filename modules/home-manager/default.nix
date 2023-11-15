@@ -38,7 +38,7 @@
     ./packages/zoxide.nix
     ./packages/git.nix
     #./packages/nvim.nix
-    ./packages/neovim.nix
+    ./packages/neovim
     ./packages/starship-symbol.nix
   ];
   # dotfiles
