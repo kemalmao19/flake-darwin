@@ -3,7 +3,7 @@
   services.yabai = {
     enable = true;
     config = {
-      focus_follows_mouse = "autoraise";
+      #focus_follows_mouse = "autoraise";
       # mouse_follows_focus = "off";
       window_placement = "second_child";
       window_opacity = "off";
@@ -11,7 +11,7 @@
       window_border = "on";
       window_border_placement = "inset";
       window_border_width = 2;
-      window_border_radius = 9;
+      window_border_radius = 11;
       active_window_border_topmost = "off";
       window_topmost = "on";
       window_shadow = "float";
@@ -25,12 +25,13 @@
       mouse_modifier = "fn";
       mouse_action1 = "move";
       mouse_action2 = "resize";
+      mouse_drop_action = "swap";
       layout = "bsp";
       top_padding = 10;
       bottom_padding = 0;
       left_padding = 10;
       right_padding = 10;
-      window_gap = 10;
+      window_gap = 8;
     };
     extraConfig = ''
       yabai -m rule --add app='System Preferences' manage=off

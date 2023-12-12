@@ -20,7 +20,9 @@
       nixpkg = "nix-env -iA nixpkgs";
       nixospkg = "nix-env -iA nixos";
       ls = "exa";
-      # vi = "hx";
+      la = "exa -la";
+      vi = "nvim";
+      tm = "tmux";
       # ls = "exa";
       # top = "btm";
     };

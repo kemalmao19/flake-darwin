@@ -10,7 +10,11 @@
       vim-nix
 
       catppuccin-nvim
+      tokyonight-nvim
+      dracula-nvim
+      nord-nvim
       indentLine
+      vim-reasonml
 
       nvim-web-devicons
       cmp-nvim-lsp
@@ -93,15 +97,25 @@
       let g:airline#extensions#tabline#enabled = 1
       let g:airline_powerline_fonts = 1
       let g:airline_statusline_ontop=0
-      let g:airline_theme='simple'
+      let g:airline_theme='badwolf'
+
+      let g:airline_extensions = ['esy', 'reason']
+        let g:reasonml_project_airline=1
+        let g:reasonml_syntastic_airline=1
+        let g:reasonml_clean_project_airline=1
+        let g:airline#extensions#whitespace#enabled = 0
+        let g:airline_powerline_fonts = 1
+        let g:airline_skip_empty_sections = 1
+
+        autocmd FileType reason map <buffer> <D-C> :ReasonPrettyPrint<Cr>
 
       let g:airline#extensions#tabline#formatter = 'default'
       " navegação entre os buffers
-      nnoremap <M-Right> :bn<cr>
-      nnoremap <M-Left> :bp<cr>
-      nnoremap <c-x> :bp \|bd #<cr>
+      " nnoremap <M-Right> :bn<cr>
+      " nnoremap <M-Left> :bp<cr>
+      " nnoremap <c-x> :bp \|bd #<cr>
 
-      colorscheme catppuccin
+      colorscheme nord
       set nowrap
       set nobackup
       set nowritebackup

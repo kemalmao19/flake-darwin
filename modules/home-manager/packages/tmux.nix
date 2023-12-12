@@ -1,20 +1,12 @@
 {pkgs, ...}: {
   programs.tmux = {
     enable = true;
-    # enableMouse = true;
-    # enableSensible = true;
-    reverseSplit = true;
-    newSession = true;
-    customPaneNavigationAndResize = true;
-
-    plugins = with pkgs;
-      [
-        #tmuxPlugins.catppuccin
-        tmuxPlugins.power-theme
-        tmuxPlugins.yank
-      ];
-
+    plugins = with pkgs; [
+      tmuxPlugins.power-theme
+    ];
+    
     extraConfig = ''
+
       set -g status off
       set -g mouse on
 
@@ -25,6 +17,7 @@
       set -g pane-border-style "fg=$bg_color bg=$bg_color"
       set -g pane-active-border-style "fg=$bg_color bg=$bg_color"
       set -sg escape-time 10 
-    '';
+     '';
+
   };
 }

@@ -24,11 +24,12 @@
     #  fd
     #  curl
     #  less
+    opam
     
   ];
 
   imports = [
-    #./packages/helix.nix 
+    ./packages/helix.nix 
     # ./packages/zsh.nix
     # ./packages/alacritty.nix
     ./packages/fish.nix
@@ -38,7 +39,7 @@
     ./packages/zoxide.nix
     ./packages/git.nix
     #./packages/nvim.nix
-    ./packages/neovim
+    #./packages/neovim
     ./packages/starship-symbol.nix
   ];
   # dotfiles
