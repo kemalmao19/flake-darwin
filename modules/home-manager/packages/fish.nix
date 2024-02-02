@@ -1,4 +1,4 @@
-{pkgs, ... }: {
+{ pkgs, ... }: {
   programs.fish = {
     enable = true;
     shellAbbrs = {
@@ -22,6 +22,7 @@
       ls = "exa";
       la = "exa -la";
       vi = "nvim";
+      vin = "nix run github:kemalmao19/nixvim";
       tm = "tmux";
       # ls = "exa";
       # top = "btm";

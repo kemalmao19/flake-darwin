@@ -23,8 +23,7 @@
     # spotify
     #  fd
     #  curl
-    #  less
-    opam
+    #  less 
     
   ];
 

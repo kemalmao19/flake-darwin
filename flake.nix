@@ -18,27 +18,39 @@
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
+    kemalmao-nixvim = {
+      url = "github:kemalmao19/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
 
-  outputs = inputs@{ nixpkgs, home-manager, darwin,... }: {
+  outputs = inputs@{ nixpkgs, home-manager, darwin, kemalmao-nixvim, ... }: {
     darwinConfigurations.kemalmao = darwin.lib.darwinSystem {
       system = "x86_64-darwin";
       lib = nixpkgs.lib;
-      pkgs = import nixpkgs { 
-        system = "x86_64-darwin"; 
-        config = { 
+      pkgs = import nixpkgs {
+        system = "x86_64-darwin";
+        config = {
           allowUnfree = true;
           # allowUnsupportedSystem = true;
           # allowBroken = true;
-          };
         };
-       
+
+        #overlays = [
+        # (final: prev: {
+        #   neovim = kemalmao-nixvim.packages.system.default;
+        # })
+        #];
+      };
+
       modules = [
         ./modules/darwin
 
-        home-manager.darwinModules.home-manager{
+        home-manager.darwinModules.home-manager
+        {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
