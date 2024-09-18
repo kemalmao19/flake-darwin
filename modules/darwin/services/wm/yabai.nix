@@ -4,14 +4,14 @@
     enable = true;
     config = {
       #focus_follows_mouse = "autoraise";
-      # mouse_follows_focus = "off";
+      mouse_follows_focus = "off";
       window_placement = "second_child";
       window_opacity = "off";
       window_opacity_duration = "0.0";
-      window_border = "on";
+      window_border = "off";
       window_border_placement = "inset";
       window_border_width = 2;
-      window_border_radius = 11;
+      window_border_radius = 30;
       active_window_border_topmost = "off";
       window_topmost = "on";
       window_shadow = "float";
@@ -28,7 +28,7 @@
       mouse_drop_action = "swap";
       layout = "bsp";
       top_padding = 10;
-      bottom_padding = 0;
+      bottom_padding = 10;
       left_padding = 10;
       right_padding = 10;
       window_gap = 8;

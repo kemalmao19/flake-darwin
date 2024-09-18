@@ -1,19 +1,23 @@
-{pkgs, ... }: {
+{ pkgs, ... }: {
   # system.keyboard.enableKeyMapping = true;
   # system.keyboard.remapCapsLockToEscape = true;
   fonts.fontDir.enable = true; # DANGER
-  fonts.fonts = [ (pkgs.nerdfonts.override { fonts = [ 
-    "Meslo" 
-    "FiraCode"
-    "Hack"
-  ]; }) ];
+  fonts.fonts = [
+    (pkgs.nerdfonts.override {
+      fonts = [
+        "Meslo"
+        "FiraCode"
+        "Hack"
+      ];
+    })
+  ];
 
   services.nix-daemon.enable = true;
   system.defaults = {
     finder.AppleShowAllExtensions = true;
     finder._FXShowPosixPathInTitle = true;
     dock = {
-      autohide = false;
+      autohide = true;
       autohide-delay = 0.0;
       autohide-time-modifier = 0.2;
       expose-animation-duration = 0.2;

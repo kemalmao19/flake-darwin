@@ -6,11 +6,10 @@
     CLICLOLOR = 1;
     EDITOR = "nvim";
   };
-  
+
   # specify my home-manager configs
   # App bundle
   home.packages = with pkgs; [
-    #  ripgrep
     vscodium
     exa
     trash-cli
@@ -18,17 +17,11 @@
     neofetch
     bottom
     bat
-    # cava
     nixfmt
-    # spotify
-    #  fd
-    #  curl
-    #  less 
-    
   ];
 
   imports = [
-    ./packages/helix.nix 
+    ./packages/helix.nix
     # ./packages/zsh.nix
     # ./packages/alacritty.nix
     ./packages/fish.nix
@@ -37,8 +30,7 @@
     ./packages/starship.nix
     ./packages/zoxide.nix
     ./packages/git.nix
-    #./packages/nvim.nix
-    #./packages/neovim
+    ./packages/neovim
     ./packages/starship-symbol.nix
   ];
   # dotfiles
