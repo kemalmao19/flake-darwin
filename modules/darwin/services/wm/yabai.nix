@@ -10,7 +10,7 @@
       window_opacity_duration = "0.0";
       window_border = "off";
       window_border_placement = "inset";
-      window_border_width = 2;
+      window_border_width = 4;
       window_border_radius = 30;
       active_window_border_topmost = "off";
       window_topmost = "on";
@@ -27,10 +27,10 @@
       mouse_action2 = "resize";
       mouse_drop_action = "swap";
       layout = "bsp";
-      top_padding = 10;
-      bottom_padding = 10;
-      left_padding = 10;
-      right_padding = 10;
+      top_padding = 15;
+      bottom_padding = 15;
+      left_padding = 15;
+      right_padding = 15;
       window_gap = 8;
     };
     extraConfig = ''

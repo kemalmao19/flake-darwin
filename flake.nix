@@ -1,7 +1,6 @@
 {
   description = "Kemalmao minimal flake for Darwin";
   inputs = {
-    # Where we get most of our software. Giant mono repo with recipes
     # called derivations that say how to build software.
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixpkgs-unstable"; # nixos-22.11
@@ -13,7 +12,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Controls system level software and settings including fonts
+    # nix darwin  
     darwin = {
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,8 +28,6 @@
         system = "x86_64-darwin";
         config = {
           allowUnfree = true;
-          # allowUnsupportedSystem = true;
-          # allowBroken = true;
         };
       };
 

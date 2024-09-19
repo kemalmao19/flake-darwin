@@ -15,9 +15,12 @@
     trash-cli
     ranger
     neofetch
+    freshfetch
     bottom
     bat
     nixfmt
+    ripgrep
+    fd
   ];
 
   imports = [
