@@ -11,13 +11,22 @@
       vim-nix
       nvim-web-devicons
       vim-tmux-navigator
+      indent-blankline-nvim
+
+      #misc
       vim-sleuth
       vim-fugitive
       vim-rhubarb
       which-key-nvim
       todo-comments-nvim
       gitsigns-nvim
-      indent-blankline-nvim
+
+      # cmp-nvim dependency
+      cmp-buffer
+      cmp-path
+      cmp-cmdline
+      luasnip
+
       {
         plugin = nvim-colorizer-lua;
         type = "lua";
@@ -86,9 +95,7 @@
         plugin = lazy-lsp-nvim;
         type = "lua";
         config = openFile ./config/plugins/lazy-lsp.lua;
-      }
-      cmp_luasnip
-      luasnip
+      } 
       {
         plugin = nvim-cmp;
         type = "lua";
@@ -110,7 +117,6 @@
       luafile ~/flake-darwin/modules/home-manager/packages/neovim/config/core/misc.lua
     '';
   };
-  # luafile ~/flake-darwin/modules/home-manager/packages/neovim/config/lua2/core/keymaps.lua
   # easy mode
   # xdg.configFile.nvim = {
   #   source = ./config;

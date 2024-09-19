@@ -3,7 +3,7 @@
   inputs = {
     # called derivations that say how to build software.
     nixpkgs = {
-      url = "github:nixos/nixpkgs/nixpkgs-unstable"; # nixos-22.11
+      url = "github:nixos/nixpkgs/nixpkgs-unstable"; # unstable channel 
     };
 
     # Manages configs links things into your home directory
@@ -19,16 +19,13 @@
     };
   };
 
-
   outputs = inputs@{ nixpkgs, home-manager, darwin, ... }: {
     darwinConfigurations.kemalmao = darwin.lib.darwinSystem {
       system = "x86_64-darwin";
       lib = nixpkgs.lib;
       pkgs = import nixpkgs {
         system = "x86_64-darwin";
-        config = {
-          allowUnfree = true;
-        };
+        config = { allowUnfree = true; };
       };
 
       modules = [
@@ -40,9 +37,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             extraSpecialArgs = { inherit inputs; };
-            users.kemal.imports = [
-              ./modules/home-manager
-            ];
+            users.kemal.imports = [ ./modules/home-manager ];
           };
         }
       ];

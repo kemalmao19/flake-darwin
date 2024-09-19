@@ -21,11 +21,9 @@
       nixospkg = "nix-env -iA nixos";
       ls = "exa";
       la = "exa -la";
-      vi = "nvim";
+      vi = "vim";
       vin = "nix run github:kemalmao19/nixvim";
       tm = "tmux";
-      # ls = "exa";
-      # top = "btm";
     };
   };
 }
