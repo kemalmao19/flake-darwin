@@ -19,11 +19,9 @@
       statdb = "systemctl status mysql";
       nixpkg = "nix-env -iA nixpkgs";
       nixospkg = "nix-env -iA nixos";
-      ls = "exa";
-      la = "exa -la";
-      vi = "vim";
       vin = "nix run github:kemalmao19/nixvim";
       tm = "tmux";
+      v = "vim"; 
     };
   };
 }

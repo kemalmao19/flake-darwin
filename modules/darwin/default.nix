@@ -43,4 +43,5 @@
 
   # backwards compat; don't change
   system.stateVersion = 4;
+  ids.uids.nixbld = 300;
 }

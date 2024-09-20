@@ -4,12 +4,12 @@ local luasnip = require("luasnip")
 luasnip.config.setup({})
 
 local kind_icons = {
-    Text = "󰉿",
+    Text = "|>",
     Method = "m",
-    Function = "󰊕",
+    Function = "fx",
     Constructor = "",
     Field = "",
-    Variable = "󰆧",
+    Variable = "var",
     Class = "󰌗",
     Interface = "",
     Module = "",

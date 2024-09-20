@@ -39,6 +39,7 @@
             extraSpecialArgs = { inherit inputs; };
             users.kemal.imports = [ ./modules/home-manager ];
           };
+          users.users.kemal.home = "/Users/kemal";
         }
       ];
     };

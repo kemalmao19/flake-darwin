@@ -1,8 +1,8 @@
 { pkgs, ... }: {
   # system.keyboard.enableKeyMapping = true;
   # system.keyboard.remapCapsLockToEscape = true;
-  fonts.fontDir.enable = true; # DANGER
-  fonts.fonts = [
+  # fonts.fontDir.enable = true; # DANGER 2024 no longer need 
+  fonts.packages = [
     (pkgs.nerdfonts.override {
       fonts = [
         "Meslo"

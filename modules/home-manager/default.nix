@@ -11,13 +11,12 @@
   # App bundle
   home.packages = with pkgs; [
     vscodium
-    exa
     trash-cli
     ranger
     neofetch
     bottom
     bat
-    nixfmt
+    nixfmt-classic
     ripgrep
     fd
   ];
