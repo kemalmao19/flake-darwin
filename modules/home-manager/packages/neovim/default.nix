@@ -13,7 +13,6 @@
         vim-nix
         nvim-web-devicons
         vim-tmux-navigator
-        indent-blankline-nvim
 
         #misc
         vim-sleuth
@@ -21,7 +20,6 @@
         vim-rhubarb
         which-key-nvim
         todo-comments-nvim
-        gitsigns-nvim
 
         # cmp-nvim dependency
         cmp-buffer
@@ -34,9 +32,24 @@
         telescope-ui-select-nvim
         plenary-nvim
 
-        # none ls 
+        # none ls
         null-ls-nvim
 
+        {
+          plugin = neoscroll-nvim;
+          type = "lua";
+          config = openFile ./config/plugins/smooth-scroll.lua;
+        }
+        {
+          plugin = gitsigns-nvim;
+          type = "lua";
+          config = openFile ./config/plugins/gitsigns.lua;
+        }
+        {
+          plugin = indent-blankline-nvim;
+          type = "lua";
+          config = openFile ./config/plugins/indent-blank.lua;
+        }
         {
           plugin = nvim-colorizer-lua;
           type = "lua";
