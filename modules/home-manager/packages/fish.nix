@@ -21,7 +21,8 @@
       nixospkg = "nix-env -iA nixos";
       vin = "nix run github:kemalmao19/nixvim";
       tm = "tmux";
-      v = "vim"; 
+      v = "vim";
+      ls = "eza";
     };
   };
 }

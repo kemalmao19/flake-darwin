@@ -3,7 +3,7 @@
   inputs = {
     # called derivations that say how to build software.
     nixpkgs = {
-      url = "github:nixos/nixpkgs/nixpkgs-unstable"; # unstable channel 
+      url = "github:nixos/nixpkgs/nixpkgs-unstable"; # unstable channel
     };
 
     # Manages configs links things into your home directory
@@ -12,7 +12,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nix darwin  
+    # nix darwin
     darwin = {
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";

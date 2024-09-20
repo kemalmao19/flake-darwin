@@ -1,7 +1,7 @@
 { pkgs, ... }: {
 
   programs.neovim =
-    let 
+    let
       openFile = path: "${builtins.readFile path}";
     in
     {
@@ -14,8 +14,8 @@
         vim-nix
         vim-tmux-navigator
 
-        # bufferline dep 
-        vim-bbye 
+        # bufferline dep
+        vim-bbye
         nvim-web-devicons
 
 
@@ -53,7 +53,7 @@
            plugin = neoscroll-nvim;
            type = "lua";
            config = openFile ./config/plugins/smooth-scroll.lua;
-        } 
+        }
         {
           plugin = gitsigns-nvim;
           type = "lua";
@@ -134,9 +134,9 @@
           config = openFile ./config/plugins/autocomplete.lua;
         }
         {
-          plugin = none-ls-nvim;
+          plugin = formatter-nvim;
           type = "lua";
-          config = openFile ./config/plugins/none-ls.lua;
+          config = openFile ./config/plugins/formatter.lua;
         }
         {
           plugin = codeium-nvim;

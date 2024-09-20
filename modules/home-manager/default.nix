@@ -16,9 +16,16 @@
     neofetch
     bottom
     bat
-    nixfmt-classic
     ripgrep
     fd
+    eza
+
+    #formatter
+    nixfmt-classic
+    stylua
+    biome
+    prettierd
+
   ];
 
   imports = [
