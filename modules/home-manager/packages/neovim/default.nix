@@ -1,7 +1,8 @@
 { pkgs, ... }: {
 
   programs.neovim =
-    let openFile = path: "${builtins.readFile path}";
+    let 
+      openFile = path: "${builtins.readFile path}";
     in
     {
       enable = true;
@@ -11,8 +12,12 @@
       vimAlias = true;
       plugins = with pkgs.vimPlugins; [
         vim-nix
-        nvim-web-devicons
         vim-tmux-navigator
+
+        # bufferline dep 
+        vim-bbye 
+        nvim-web-devicons
+
 
         #misc
         vim-sleuth
@@ -21,10 +26,12 @@
         which-key-nvim
         todo-comments-nvim
 
-        # cmp-nvim dependency
+        # cmp-nvim dep
+        cmp-nvim-lsp
         cmp-buffer
         cmp-path
         cmp-cmdline
+        cmp_luasnip
         luasnip
 
         # telescope dependency
@@ -36,10 +43,17 @@
         null-ls-nvim
 
         {
-          plugin = neoscroll-nvim;
+          plugin = friendly-snippets;
           type = "lua";
-          config = openFile ./config/plugins/smooth-scroll.lua;
+          config = ''
+          require('luasnip.loaders.from_vscode').lazy_load()
+          '';
         }
+        {
+           plugin = neoscroll-nvim;
+           type = "lua";
+           config = openFile ./config/plugins/smooth-scroll.lua;
+        } 
         {
           plugin = gitsigns-nvim;
           type = "lua";
