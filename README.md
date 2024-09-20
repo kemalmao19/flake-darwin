@@ -61,7 +61,7 @@ cd flake-darwin
 nix build .#darwinConfigurations.kemalmao.system
 ```
 
-- Apply from `Result`  
+- Apply Build result
   command for apply the result: `darwin-rebuild switch --flake  .#[NAME]`  
   Available for `[NAME]`:
   - `kemalmao`  

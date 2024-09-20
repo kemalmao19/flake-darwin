@@ -5,9 +5,7 @@
   environment = {
     # shells = with pkgs; [ bash zsh fish ];
     # loginShell = pkgs.fish;
-    systemPackages = [
-      pkgs.coreutils
-    ];
+    systemPackages = [ pkgs.coreutils ];
     systemPath = [ "/opt/homebrew/bin" ];
     pathsToLink = [ "/Applications" ];
   };

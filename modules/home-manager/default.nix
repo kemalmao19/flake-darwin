@@ -10,7 +10,6 @@
   # specify my home-manager configs
   # App bundle
   home.packages = with pkgs; [
-    vscodium
     trash-cli
     ranger
     neofetch
@@ -30,6 +29,7 @@
   ];
 
   imports = [
+    ./packages/vscode.nix
     ./packages/helix.nix
     # ./packages/zsh.nix
     # ./packages/alacritty.nix
