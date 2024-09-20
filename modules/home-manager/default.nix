@@ -20,11 +20,12 @@
     fd
     eza
 
-    #formatter
+    ##formatter
     nixfmt-classic
     stylua
-    biome
+    #biome
     prettierd
+    checkmake
 
   ];
 
