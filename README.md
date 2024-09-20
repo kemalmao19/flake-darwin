@@ -1,12 +1,15 @@
 # MacOS Home Manager with Nix
-This is simple nix flake (update 08/2023)
+
+This is simple nix flake for darwin
 
 # Why Nix
+
 Nix flake provides subcommands for creating, modifying and querying Nix flakes. Flakes are the unit for packaging Nix code in a reproducible and discoverable way. They can have dependencies on other flakes, making it possible to have multi-repository Nix projects.
 
 A flake is a filesystem tree (typically fetched from a Git repository or a tarball) that contains a file named flake.nix in the root directory. flake.nix specifies some metadata about the flake such as dependencies (called inputs), as well as its outputs (the Nix values such as packages or NixOS modules provided by the flake).
 
 # Home Manager
+
 ![Alt text](https://github.com/kemalmao19/flake/blob/main/gallery/nix.png)
 
 Nix Home Manager is a component of the Nix package manager ecosystem. Nix is a powerful package manager for Unix-like operating systems that provides a purely functional and declarative approach to package management. It allows users to define and manage software packages and configurations in a reproducible manner.
@@ -17,12 +20,12 @@ With Nix Home Manager, you can version control your home directory configuration
 
 By using Nix Home Manager in combination with the Nix package manager, you can create reproducible and portable development environments across different machines, making it a popular choice among developers who value the benefits of functional programming and declarative package management.
 
-
-
 # How to use my flake
+
 ### Prerequisite
 
 ##### Nix Package Manager
+
 Easy install with determinate systems:
 
 ```console
@@ -59,15 +62,13 @@ nix build .#darwinConfigurations.kemalmao.system
 ```
 
 - Apply from `Result`  
-  command for apply the result: `./result/sw/bin/darwin-rebuild switch --flake .#`  
+  command for apply the result: `darwin-rebuild switch --flake  .#[NAME]`  
   Available for `[NAME]`:
   - `kemalmao`  
-    After `Run Build` you can apply from `./result/sw/bin/darwin-rebuild switch --flake .#kemalmao` with this command
+    After `Run Build` you can apply from `darwin-rebuild switch --flake .#kemalmao` with this command
 
 ```console
-./result/sw/bin/darwin-rebuild switch --flake .#kemalmao
+darwin-rebuild switch --flake .#kemalmaokemalmao
 ```
 
-- Done 
-
-
+- Done
