@@ -11,6 +11,7 @@ local sources = {
       'typescript',
       'typescriptreact',
       'javascriptreact',
+      'rescript',
       'html',
       'yaml',
       'markdown',

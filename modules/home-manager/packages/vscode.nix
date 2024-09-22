@@ -26,6 +26,10 @@
       };
       "codeium.enableConfig" = { "*" = true; };
       "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      "workbench.startupEditor" = "none";
+      "[rescript]" = {
+        "editor.defaultFormatter" = "chenglou92.rescript-vscode";
+      };
     };
     extensions = with pkgs.vscode-extensions; [
       ms-vscode.live-server

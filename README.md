@@ -68,7 +68,7 @@ nix build .#darwinConfigurations.kemalmao.system
     After `Run Build` you can apply from `darwin-rebuild switch --flake .#kemalmao` with this command
 
 ```console
-darwin-rebuild switch --flake .#kemalmaokemalmao
+darwin-rebuild switch --flake .#kemalmao
 ```
 
 - Done

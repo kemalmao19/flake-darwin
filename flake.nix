@@ -17,6 +17,11 @@
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    ts-rescript = {
+      url = "github:nkrkv/tree-sitter-rescript";
+      flake = false;
+    };
   };
 
   outputs = inputs@{ nixpkgs, home-manager, darwin, ... }: {

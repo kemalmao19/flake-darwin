@@ -61,7 +61,24 @@
       "inputs": {
         "darwin": "darwin",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "ts-rescript": "ts-rescript"
+      }
+    },
+    "ts-rescript": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722219617,
+        "narHash": "sha256-md3fgW+h99va2Rwxzub7nrsEe64fC52g6NPCaXGAaxg=",
+        "owner": "nkrkv",
+        "repo": "tree-sitter-rescript",
+        "rev": "4606cd81c4c31d1d02390fee530858323410a74c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nkrkv",
+        "repo": "tree-sitter-rescript",
+        "type": "github"
       }
     }
   },

@@ -1,6 +1,7 @@
 { pkgs, ... }: {
 
   programs.neovim = let openFile = path: "${builtins.readFile path}";
+
   in {
     enable = true;
     withPython3 = true;
@@ -105,6 +106,7 @@
           p.tree-sitter-lua
           p.tree-sitter-python
           p.tree-sitter-json
+          p.tree-sitter-rescript
         ]));
         type = "lua";
         config = openFile ./config/plugins/treesitter.lua;
@@ -155,7 +157,7 @@
       luafile ~/flake-darwin/modules/home-manager/packages/neovim/config/core/misc.lua
     '';
   };
-  # if common dotfiles config 
+  # easy mode
   # xdg.configFile.nvim = {
   #   source = ./config;
   #   recursive = true;

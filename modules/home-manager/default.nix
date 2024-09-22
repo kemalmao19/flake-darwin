@@ -7,6 +7,8 @@
     EDITOR = "nvim";
   };
 
+  nixpkgs.overlays = [ ../../overlays/default.nix ];
+
   # specify my home-manager configs
   # App bundle
   home.packages = with pkgs; [
@@ -30,7 +32,7 @@
 
   imports = [
     ./packages/vscode.nix
-    ./packages/helix.nix
+    # ./packages/helix.nix
     # ./packages/zsh.nix
     # ./packages/alacritty.nix
     ./packages/fish.nix
