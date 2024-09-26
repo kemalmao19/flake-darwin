@@ -1,12 +1,15 @@
-require("lazy-lsp").setup({
+require('lazy-lsp').setup {
     -- By default all available servers are set up. Exclude unwanted or misbehaving servers.
     excluded_servers = {
-        "ccls", "zk",
+        'ccls',
+        'zk',
+        'ruff',
     },
     -- Alternatively specify preferred servers for a filetype (others will be ignored).
     preferred_servers = {
         markdown = {},
-        python = { "pyright", "ruff_lsp" },
+        typescript = { 'ts_ls' },
+        python = { 'pyright' },
     },
     prefer_local = true, -- Prefer locally installed servers over nix-shell
     -- Default config passed to all servers to specify on_attach callback and other options.
@@ -25,10 +28,10 @@ require("lazy-lsp").setup({
                 Lua = {
                     diagnostics = {
                         -- Get the language server to recognize the `vim` global
-                        globals = { "vim" },
+                        globals = { 'vim' },
                     },
                 },
             },
         },
     },
-})
+}

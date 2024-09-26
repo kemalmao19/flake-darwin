@@ -4,7 +4,7 @@ local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 
 local sources = {
   diagnostics.checkmake,
-  formatting.prettierd.with {
+  formatting.biome.with {
     filetypes = {
       'javascript',
       'json',
@@ -19,6 +19,7 @@ local sources = {
   },
   formatting.stylua,
   formatting.nixfmt,
+  formatting.black,
 }
 
 local augroup = vim.api.nvim_create_augroup('LspFormatting', {})

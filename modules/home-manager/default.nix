@@ -24,14 +24,21 @@
     ##formatter
     nixfmt-classic
     stylua
-    #biome
-    prettierd
-    checkmake
+    biome
+    # codespell
+    black
+    # prettierd
+    # checkmake
+
+    #node
+    nodejs_20
+    nodePackages."typescript"
+    nodePackages."typescript-language-server"
 
   ];
 
   imports = [
-    ./packages/vscode.nix
+    ./packages/vscode
     # ./packages/helix.nix
     # ./packages/zsh.nix
     # ./packages/alacritty.nix

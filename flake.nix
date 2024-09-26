@@ -18,6 +18,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # rescript
     ts-rescript = {
       url = "github:nkrkv/tree-sitter-rescript";
       flake = false;
