@@ -34,10 +34,10 @@ local diff = {
     cond = hide_in_width,
 }
 
-require('lualine').setup({
+require('lualine').setup {
     options = {
         icons_enabled = true,
-        theme = 'nord', -- Set theme based on environment variable
+        theme = 'onedark', -- Set theme based on environment variable
         -- Some useful glyphs:
         -- https://www.nerdfonts.com/cheat-sheet
         --        
@@ -64,4 +64,4 @@ require('lualine').setup({
     },
     tabline = {},
     extensions = { 'fugitive' },
-})
+}

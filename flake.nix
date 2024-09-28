@@ -18,7 +18,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # rescript
+    # tree-sitter-rescript
     ts-rescript = {
       url = "github:nkrkv/tree-sitter-rescript";
       flake = false;
@@ -33,7 +33,6 @@
         system = "x86_64-darwin";
         config = { allowUnfree = true; };
       };
-
       modules = [
         ./modules/darwin
 

@@ -4,6 +4,7 @@ require('lazy-lsp').setup {
         'ccls',
         'zk',
         'ruff',
+        'denols',
     },
     -- Alternatively specify preferred servers for a filetype (others will be ignored).
     preferred_servers = {

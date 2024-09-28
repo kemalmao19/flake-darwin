@@ -39,17 +39,17 @@
 
   imports = [
     ./packages/vscode
+    ./packages/starship
+    ./packages/starship/starship-symbol.nix
     # ./packages/helix.nix
     # ./packages/zsh.nix
     # ./packages/alacritty.nix
     ./packages/fish.nix
     ./packages/tmux.nix
     ./packages/fzf.nix
-    ./packages/starship.nix
     ./packages/zoxide.nix
     ./packages/git.nix
     ./packages/neovim
-    ./packages/starship-symbol.nix
   ];
   # dotfiles
   home.file.".inputrc".source = ./dotfiles/inputrc;
